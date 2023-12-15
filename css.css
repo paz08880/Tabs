@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #deeeff;
+}
+
+.box{
+    max-width: 600px;
+    margin:0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0 , 0.1);
+    padding:20px;
+    border-radius: 20px;
+}
+
+.tab-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 2px solid rgba(229,229,229);
+    position: relative;
+    padding: 20px 15px;
+}
+
+.tab-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(229, 229, 229);
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #919191;
+    background-color: transparent;
+    cursor: pointer;
+}
+  
+.tab-btn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.tab-content{
+    padding:20px;
+}
+
+.tab-content .content{
+    display: none;
+    animation: fading-tabs 0.3s ease-in-out;
+}
+
+@keyframes fading-tabs{
+    from{
+        transform:translateX(50px);
+        opacity: 0;
+    }
+    to{
+        transform:translateX(0px);
+        opacity: 1;
+    }
+}
+
+.tab-content .content.active-content{
+    display: block!important;
+}
+
+.tab-content .content h1{
+    margin-bottom:10px;
+}
+
+.active-tab{
+    color: #1f1f1f !important;
+    border: 1px solid rgba(0,0, 0)!important;
+
+}
+
+.line-tab{
+    position: absolute;
+    top:80px;
+    left:0;
+    background-color: aqua;
+    height: 5px;
+    width: 0px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.active-content{
+    display: block;
+}
+
+
+.level-arrow {
+    font-size: 18px;
+    color: #919191;
+    margin: 0 5px; /* Adjust the margin to set the distance between arrows and numbers */
+  }
